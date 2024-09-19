@@ -18,10 +18,12 @@ await app.load({
   autoStart: true,
 });
 
-app.useTrpc('/trpc/*');
+app.useTrpc('/trpc/*', {
+  middlewares: [cors()],
+});
 
 const config = app.serve(3000);
 
-export { BlazeTrpcRouter };
+export type { BlazeTrpcRouter };
 
 export default config;
