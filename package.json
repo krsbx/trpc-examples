@@ -17,7 +17,7 @@
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.3"
   },
   "lint-staged": {
     "projects/backend/**/*.{js,jsx,ts,tsx}": [
