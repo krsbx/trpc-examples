@@ -1,0 +1,35 @@
+{
+  "name": "trpc-examples",
+  "scripts": {
+    "prepare": "husky",
+    "build:frontend": "cd projects/frontend && npm run build",
+    "build:backend": "cd projects/backend && npm run build",
+    "build": "concurrently \"npm run build:frontend\" \"npm run build:backend\"",
+    "dev:frontend": "cd projects/frontend && npm run dev",
+    "dev:backend": "cd projects/backend && npm run dev",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\""
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.9.1",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "lint-staged": {
+    "projects/backend/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix --config projects/backend/eslint.config.mjs"
+    ],
+    "projects/frontend/**/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix --config projects/frontend/eslint.config.js"
+    ]
+  },
+  "engines": {
+    "node": ">=18.20.0"
+  }
+}
