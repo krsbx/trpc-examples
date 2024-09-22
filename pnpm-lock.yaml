@@ -39,11 +39,8 @@ importers:
         specifier: ^7.1.1
         version: 7.1.1(zod@3.23.8)
       '@busy-hour/blaze':
-        specifier: 4.0.0-2
-        version: 4.0.0-2
-      '@busy-hour/blaze-trpc':
-        specifier: 0.0.1-4
-        version: 0.0.1-4
+        specifier: 4.0.0
+        version: 4.0.0
       '@hono/node-server':
         specifier: ^1.13.0
         version: 1.13.0(hono@4.6.2)
@@ -67,8 +64,8 @@ importers:
         version: 3.23.8
     devDependencies:
       '@busy-hour/blaze-types':
-        specifier: 0.2.0-2
-        version: 0.2.0-2(@busy-hour/blaze@4.0.0-2)
+        specifier: 0.2.0
+        version: 0.2.0
       '@eslint/compat':
         specifier: ^1.1.1
         version: 1.1.1
@@ -187,16 +184,11 @@ packages:
     resolution: {integrity: sha512-VBj9MYyDb9tuLq7yzqjgzt6Q+IBQLrGZfdjOekyEirZPHxXWoTSGUTMrpsfi58Up73d13NfYLv8HT9vmznjzhQ==}
     engines: {node: '>=6.9.0'}
 
-  '@busy-hour/blaze-trpc@0.0.1-4':
-    resolution: {integrity: sha512-dgInjNDw/aLtImKMsSwVtQLIRI761hAnvyNtNRg+KyudhEwvymRoGgwQKTVp4Ab4CaWJlzFjT7CccNUPr/wOFg==}
+  '@busy-hour/blaze-types@0.2.0':
+    resolution: {integrity: sha512-yKzEVtY+7sjoe2x5KcuyFfkqSeCZy0mf/GPBbFemIaBY22GD8ws9PcZRrugy8nkSslQKH2+HlXlsgPjrd2eEgQ==}
 
-  '@busy-hour/blaze-types@0.2.0-2':
-    resolution: {integrity: sha512-WtQdYZJUG5ztJisccp4wecqAYvA05YdjE+EoZV96arM2EnbfRLDGEv44jEVfxS2q2HXcB+7xleRRIZoN82+z3w==}
-    peerDependencies:
-      '@busy-hour/blaze': '*'
-
-  '@busy-hour/blaze@4.0.0-2':
-    resolution: {integrity: sha512-O/ZFy2wyiCncPcph7k2Q/ruYh8WIZ7c87vtn+CHe4YF9vyhSrsRs9lTErfIcK2Hh+HPgsMbTMjq0h8hHABuBRg==}
+  '@busy-hour/blaze@4.0.0':
+    resolution: {integrity: sha512-2B2nNfO96Ixk9S2LKatBEemCmf1ZwjHQ6jV+hSI9eLRV0SU8xIJRrIQVszJekbAeIAJiAIdL8UN1GbLKwmimtA==}
 
   '@commitlint/cli@19.5.0':
     resolution: {integrity: sha512-gaGqSliGwB86MDmAAKAtV9SV1SHdmN8pnGq4EJU4+hLisQ7IFfx4jvU4s+pk6tl0+9bv6yT+CaZkufOinkSJIQ==}
@@ -2380,14 +2372,12 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@busy-hour/blaze-trpc@0.0.1-4': {}
-
-  '@busy-hour/blaze-types@0.2.0-2(@busy-hour/blaze@4.0.0-2)':
+  '@busy-hour/blaze-types@0.2.0':
     dependencies:
-      '@busy-hour/blaze': 4.0.0-2
+      '@busy-hour/blaze': 4.0.0
       chokidar: 3.6.0
 
-  '@busy-hour/blaze@4.0.0-2':
+  '@busy-hour/blaze@4.0.0':
     dependencies:
       hono: 4.6.2
       zod: 3.23.8

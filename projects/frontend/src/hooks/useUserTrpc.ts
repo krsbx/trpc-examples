@@ -8,8 +8,8 @@ type UserFindParams = Parameters<(typeof client)["users.find"]["query"]>["0"];
 
 const useUserTrpc = () => {
   const [listResp, setListResp] = useState<UserListResp>({
-    ok: true,
-    result: { data: [], page: { limit: 10, offset: 0, page: 1, total: 0 } },
+    data: [],
+    page: { limit: 10, offset: 0, page: 1, total: 0 },
   });
 
   const createUser = useCallback(async () => {
@@ -26,20 +26,13 @@ const useUserTrpc = () => {
 
     console.log(createRes);
 
-    if (!createRes.ok) return;
-
     setListResp((prev) => {
-      if (!prev.ok) return prev;
-
       return {
         ...prev,
-        result: {
-          ...prev.result,
-          data: [...prev.result.data, createRes.result],
-          page: {
-            ...prev.result.page,
-            total: prev.result.page.total + 1,
-          },
+        data: [...prev.data, createRes],
+        page: {
+          ...prev.page,
+          total: prev.page.total + 1,
         },
       };
     });
@@ -52,8 +45,6 @@ const useUserTrpc = () => {
         params: null,
         ...args,
       });
-
-      if (!listRes.ok) return;
 
       setListResp(listRes);
     },
